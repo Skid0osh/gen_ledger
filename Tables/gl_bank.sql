@@ -9,7 +9,8 @@ DROP TABLE erp_gl_bank
 
 CREATE TABLE erp_gl_bank 
   (		bank_id 						VARCHAR2(5) NOT NULL
-		,	gl_acct_id 					VARCHAR2(8) NOT NULL
+		,	gl_acct_id 					NUMBER(8)		NOT NULL
+		, title								VARCHAR2(30)
 		,	descript						VARCHAR2(30)
 		, bank_acct_no				VARCHAR2(20)
 		, checkbook_dt				DATE
@@ -47,8 +48,9 @@ CREATE TABLE erp_gl_bank
 		,	deposits_intransit	NUMBER(20,4)
 		,	misc_plus						NUMBER(20,4)
 		,	misc_minus					NUMBER(20,4)
-		, change_user					VARCHAR2(50)	NOT NULL
-		, change_dt						DATE					NOT NULL
+		, active							CHAR(1)				NOT NULL CHECK (UPPER(active) = active)
+		, user_id							VARCHAR2(50)	NOT NULL
+		, dt_edited						DATE					NOT NULL
 		,	notes								VARCHAR2(250)
   )
 /
