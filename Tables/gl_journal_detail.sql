@@ -19,11 +19,11 @@ CREATE TABLE erp_gl_journal_detail
 --------------------------------------------------------
 --  DDL for Index ERP_GL_JOURNAL_DETAIL_PK
 --------------------------------------------------------
-CREATE UNIQUE INDEX erp_gl_journal_detail_pk ON erp_gl_journal_detail (batch_id, batch_trans_id, gl_acct_id)
+CREATE UNIQUE INDEX erp_gl_journal_detail_pk ON erp_gl_journal_detail (batch_id, batch_tran_id, gl_acct_id)
 /
 --------------------------------------------------------
 --  Constraints for Table ERP_GL_JOURNAL_DETAIL
 --------------------------------------------------------
-ALTER TABLE erp_gl_journal_detail ADD CONSTRAINT erp_gl_journal_detail_pk PRIMARY KEY (batch_id, batch_trans_id, gl_acct_id)
+ALTER TABLE erp_gl_journal_detail ADD CONSTRAINT erp_gl_journal_detail_pk PRIMARY KEY (batch_id, batch_tran_id, gl_acct_id)
 USING INDEX  ENABLE
 /

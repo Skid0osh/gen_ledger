@@ -4,29 +4,29 @@
 --------------------------------------------------------
 --  DDL for Table ERP_GL_BANK
 --------------------------------------------------------
-DROP TABLE erp_gl_bank
+DROP TABLE erp_gl_bank CASCADE CONSTRAINTS
 /
 
 CREATE TABLE erp_gl_bank 
   (		bank_id 						VARCHAR2(5) NOT NULL
 		,	gl_acct_id 					NUMBER(8)		NOT NULL
-		, title								VARCHAR2(30)
-		,	descript						VARCHAR2(30)
+		, bank_title					VARCHAR2(30)
+		,	bank_desc						VARCHAR2(30)
 		, bank_acct_no				VARCHAR2(20)
 		, checkbook_dt				DATE
 		,	statement_dt				DATE
-		, year 								NUMBER(4)
-		, period							NUMBER(2)
+		, bank_year						NUMBER(4)
+		, bank_period					NUMBER(2)
 		,	bank_name						VARCHAR2(32)
-		, address1						VARCHAR2(32)
-		, address2						VARCHAR2(32)
-		, city								VARCHAR2(25)
-		, state								VARCHAR2(4)
-		, zip_code						VARCHAR2(10)
-		,	contact							VARCHAR2(30)
-		,	phone_no						VARCHAR2(23)
-		,	fax_no							VARCHAR2(23)
-		, country							VARCHAR2(3)
+		, bank_addr1					VARCHAR2(32)
+		, bank_addr2					VARCHAR2(32)
+		, bank_city						VARCHAR2(25)
+		, bank_state					VARCHAR2(4)
+		, bank_zip_code				VARCHAR2(10)
+		,	bank_contact				VARCHAR2(30)
+		,	bank_phone_no				VARCHAR2(23)
+		,	bank_fax_no					VARCHAR2(23)
+		, bank_country				VARCHAR2(3)
 		, remit_name					VARCHAR2(32)
 		,	remit_addr1					VARCHAR2(32)
 		,	remit_addr2					VARCHAR2(32)
@@ -48,7 +48,7 @@ CREATE TABLE erp_gl_bank
 		,	deposits_intransit	NUMBER(20,4)
 		,	misc_plus						NUMBER(20,4)
 		,	misc_minus					NUMBER(20,4)
-		, active							CHAR(1)				NOT NULL CHECK (UPPER(active) = active)
+		, dt_deleted					DATE
 		, user_id							VARCHAR2(50)	NOT NULL
 		, dt_edited						DATE					NOT NULL
 		,	notes								VARCHAR2(250)

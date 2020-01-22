@@ -9,8 +9,8 @@ DROP TABLE erp_gl_journal_type
 
 CREATE TABLE erp_gl_journal_type
   (   journal_type_id   NUMBER        NOT NULL
-    , descript          VARCHAR2(30)
-    , active            CHAR(1)       NOT NULL CHECK (UPPER(active) = active)
+    , journal_type_desc VARCHAR2(30)
+    , dt_deleted        DATE
     , change_user       VARCHAR2(50)  NOT NULL
     , change_dt         DATE          NOT NULL
   )
@@ -30,31 +30,31 @@ USING INDEX  ENABLE
 --  Populate Table with Current Values (sequence number set to start at 10)
 --------------------------------------------------------
 INSERT INTO erp_gl_journal_type
-    VALUES (0, 'DO NOT USE (BAL FWD PREV YEAR)', 'Y', 'Initial Load', SYSDATE)
+    VALUES (0, 'DO NOT USE (BAL FWD PREV YEAR)', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (1, 'CASH RECEIPTS', 'Y', 'Initial Load', SYSDATE)
+    VALUES (1, 'CASH RECEIPTS', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (2, 'CASH DISPERSEMENTS', 'Y', 'Initial Load', SYSDATE)
+    VALUES (2, 'CASH DISPERSEMENTS', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (4, 'PAYROLL', 'Y', 'Initial Load', SYSDATE)
+    VALUES (4, 'PAYROLL', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (5, 'ACCOUNTS PAYABLE', 'Y', 'Initial Load', SYSDATE)
+    VALUES (5, 'ACCOUNTS PAYABLE', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (6, 'ASSETS', 'Y', 'Initial Load', SYSDATE)
+    VALUES (6, 'ASSETS', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (7, 'RECURRING', 'Y', 'Initial Load', SYSDATE)
+    VALUES (7, 'RECURRING', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (8, 'ACCOUNTS RECEIVABLE', 'Y', 'Initial Load', SYSDATE)
+    VALUES (8, 'ACCOUNTS RECEIVABLE', null, 'Initial Load', SYSDATE)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (9, 'ADJUSTING JOURNAL', 'Y', 'Initial Load', SYSDATE)
+    VALUES (9, 'ADJUSTING JOURNAL', null, 'Initial Load', SYSDATE)
 /
 COMMIT
 /

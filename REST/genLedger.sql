@@ -2,10 +2,13 @@
 -- Exported REST Definitions from ORDS Schema Version 19.2.0.r1991647
 -- Schema: ERP_DEVELOPMENT   Date: Mon Jan 20 17:12:26 EST 2020
 --
+DECLARE
+  currSchema  VARCHAR(20);
 BEGIN
+  SELECT SYS_CONTEXT('USERENV', 'CURRENT_SCHEMA') INTO currSchema FROM dual;
   ORDS.ENABLE_SCHEMA(
       p_enabled             => TRUE,
-      p_schema              => 'ERP_DEVELOPMENT',
+      p_schema              => currSchema,
       p_url_mapping_type    => 'BASE_PATH',
       p_url_mapping_pattern => 'db',
       p_auto_rest_auth      => FALSE);    

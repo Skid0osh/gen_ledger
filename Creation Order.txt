@@ -1,0 +1,12 @@
+Tables/gl_account.sql
+Tables/gl_bank.sql
+Data/export_erp_gl_bank.sql
+Tables/gl_batch.sql
+Tables/gl_journal_detail.sql
+Tables/gl_journal_header.sql
+Tables/gl_journal_type.sql
+Sequences/gl_journal_type_seq.sql
+Triggers/erp_gl_journal_type_seq_tr.sql
+Tables/gl_pending_detail.sql
+Tables/gl_pending_header.sql
+REST/genLedger.sql
