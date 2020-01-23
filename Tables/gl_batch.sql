@@ -12,7 +12,8 @@ CREATE TABLE erp_gl_batch
       ,	dt_created     DATE           NOT NULL
       , 	dt_posted      DATE
       ,	source_module  VARCHAR2(2)
+      , 	post_error     VARCHAR2(1)
       ,	user_id        VARCHAR2(50)   NOT NULL
-      , 	post_error     CHAR(1)
+      ,  dt_updated     DATE           NOT NULL
    )
 /

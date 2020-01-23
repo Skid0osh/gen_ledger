@@ -50,7 +50,7 @@ CREATE TABLE erp_gl_bank
 		,	misc_minus					NUMBER(20,4)
 		, dt_deleted					DATE
 		, user_id							VARCHAR2(50)	NOT NULL
-		, dt_edited						DATE					NOT NULL
+		, dt_updated					DATE					NOT NULL
 		,	notes								VARCHAR2(250)
   )
 /

@@ -21,6 +21,7 @@ CREATE TABLE erp_gl_transaction
 		,	invoice_ref				VARCHAR2(20)
 		,	amount						NUMBER(20,4)	NOT NULL
 		,	user_id						VARCHAR2(50)	NOT NULL
+		,	dt_posted					DATE
 		,	dt_updated				VARCHAR2(20)	NOT NULL
   )
 /

@@ -13,7 +13,8 @@ CREATE TABLE erp_gl_journal_detail
     ,	gl_acct_id      NUMBER(8,0)   NOT NULL
     ,	amount          NUMBER(20,4)  NOT NULL
     ,	user_id         VARCHAR2(50)  NOT NULL
-    ,	dt_added        DATE          NOT NULL
+    , dt_posted       DATE
+    ,	dt_updated      DATE          NOT NULL
   )
 /
 --------------------------------------------------------
