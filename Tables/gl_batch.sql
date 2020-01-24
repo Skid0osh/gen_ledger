@@ -17,3 +17,19 @@ CREATE TABLE erp_gl_batch
       ,  dt_updated     DATE           NOT NULL
    )
 /
+--------------------------------------------------------
+--  DDL for Index ERP_GL_BATCH_IDX1
+--------------------------------------------------------
+CREATE UNIQUE INDEX erp_gl_batch_idx1 ON erp_gl_batch (dt_posted, batch_id)
+/
+--------------------------------------------------------
+--  DDL for Index ERP_GL_BATCH_PK
+--------------------------------------------------------
+CREATE UNIQUE INDEX erp_gl_batch_pk ON erp_gl_batch (batch_id)
+/
+--------------------------------------------------------
+--  Constraints for Table ERP_GL_BATCH
+--------------------------------------------------------
+ALTER TABLE erp_gl_batch ADD CONSTRAINT erp_gl_batch_pk PRIMARY KEY (batch_id)
+USING INDEX  ENABLE
+/

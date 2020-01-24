@@ -11,4 +11,8 @@ Triggers/erp_gl_journal_type_seq_tr.sql
 Tables/gl_pending_detail.sql
 Tables/gl_pending_header.sql
 Tables/gl_transaction.sql
+Functions/new_batch_trans_id
+Functions/validate_journal_entry.sql
+Procedures/post_journal_entry.sql
+Procedures/post_transactions.sql
 REST/genLedger.sql

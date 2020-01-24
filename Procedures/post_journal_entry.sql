@@ -9,7 +9,7 @@ set define off;
 CREATE OR REPLACE EDITIONABLE PROCEDURE post_journal_entry 
 (
     inBatchID       IN NUMBER
-,   inBatchTranID   IN NUMBER
+,   inBatchTransID  IN NUMBER
 ,   inUserID        IN VARCHAR2 
 ,   outHeadRowCount OUT NUMBER 
 ,   outDetRowCount  OUT NUMBER
@@ -21,8 +21,8 @@ BEGIN
     SET     user_id     = inUserID
         ,   dt_posted   = SYSDATE
         ,   dt_updated  = SYSDATE
-    WHERE batch_id      = inBatchID
-      AND batch_tran_id = inBatchTranID;
+    WHERE batch_id        = inBatchID
+      AND batch_trans_id  = inBatchTransID;
     outDetRowCount := SQL%ROWCOUNT;
 
     -- Update Header Records
@@ -31,8 +31,8 @@ BEGIN
     SET     user_id     = inUserID
         ,   dt_updated  = SYSDATE
         ,   dt_posted   = SYSDATE
-    WHERE batch_id      = inBatchID
-      AND batch_tran_id = inBatchTranID;
+    WHERE batch_id        = inBatchID
+      AND batch_trans_id  = inBatchTransID;
     outHeadRowCount := SQL%ROWCOUNT;
 END post_journal_entry;
 /

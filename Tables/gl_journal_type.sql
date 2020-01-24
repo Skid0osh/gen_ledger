@@ -30,31 +30,31 @@ USING INDEX  ENABLE
 --  Populate Table with Current Values (sequence number set to start at 10)
 --------------------------------------------------------
 INSERT INTO erp_gl_journal_type
-    VALUES (0, 'DO NOT USE (BAL FWD PREV YEAR)', null, 'Initial Load', SYSDATE)
+    VALUES (0, 'DO NOT USE (BAL FWD PREV YEAR)', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (1, 'CASH RECEIPTS', null, 'Initial Load', SYSDATE)
+    VALUES (1, 'CASH RECEIPTS', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (2, 'CASH DISPERSEMENTS', null, 'Initial Load', SYSDATE)
+    VALUES (2, 'CASH DISPERSEMENTS', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (4, 'PAYROLL', null, 'Initial Load', SYSDATE)
+    VALUES (4, 'PAYROLL', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (5, 'ACCOUNTS PAYABLE', null, 'Initial Load', SYSDATE)
+    VALUES (5, 'ACCOUNTS PAYABLE', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (6, 'ASSETS', null, 'Initial Load', SYSDATE)
+    VALUES (6, 'ASSETS', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (7, 'RECURRING', null, 'Initial Load', SYSDATE)
+    VALUES (7, 'RECURRING', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (8, 'ACCOUNTS RECEIVABLE', null, 'Initial Load', SYSDATE)
+    VALUES (8, 'ACCOUNTS RECEIVABLE', 'Initial Load', SYSDATE, null)
 /
 INSERT INTO erp_gl_journal_type
-    VALUES (9, 'ADJUSTING JOURNAL', null, 'Initial Load', SYSDATE)
+    VALUES (9, 'ADJUSTING JOURNAL', 'Initial Load', SYSDATE, null)
 /
 COMMIT
 /

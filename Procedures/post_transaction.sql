@@ -9,7 +9,7 @@ set define off;
 CREATE OR REPLACE EDITIONABLE PROCEDURE post_transaction 
 (
     inBatchID       IN NUMBER 
-,   inBatchTranID   IN NUMBER
+,   inBatchTransID  IN NUMBER
 ,   inUserID        IN VARCHAR2
 ,   outRowCount     OUT NUMBER
 ) AS
@@ -19,8 +19,8 @@ BEGIN
     SET     user_id     = inUserID
         ,   dt_posted   = SYSDATE
         ,   dt_updated  = SYSDATE
-    WHERE batch_id      = inBatchID
-      AND batch_tran_id = inBatchTranID;
+    WHERE batch_id          = inBatchID
+      AND batch_trans_id    = inBatchTransID;
     outRowCount := SQL%ROWCOUNT;
 END post_transaction;
 /

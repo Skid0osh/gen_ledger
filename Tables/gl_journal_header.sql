@@ -10,7 +10,7 @@ DROP TABLE erp_gl_journal_header
 CREATE TABLE erp_gl_journal_header
 (
     batch_id        NUMBER(6)     NOT NULL
-  , batch_tran_id   NUMBER(4)     NOT NULL
+  , batch_trans_id  NUMBER(4)     NOT NULL
   , trans_year      NUMBER(4)     NOT NULL
   , trans_period    NUMBER(2)     NOT NULL
   , entry_dt        DATE
@@ -26,11 +26,11 @@ CREATE TABLE erp_gl_journal_header
 --------------------------------------------------------
 --  DDL for Index ERP_GL_JOURNAL_HEADER_PK
 --------------------------------------------------------
-CREATE UNIQUE INDEX erp_gl_journal_header_pk ON erp_gl_journal_header (batch_id, batch_tran_id)
+CREATE UNIQUE INDEX erp_gl_journal_header_pk ON erp_gl_journal_header (batch_id, batch_trans_id)
 /
 --------------------------------------------------------
 --  Constraints for Table ERP_GL_JOURNAL_HEADER
 --------------------------------------------------------
-ALTER TABLE erp_gl_journal_header ADD CONSTRAINT erp_gl_journal_header_pk PRIMARY KEY (batch_id, batch_tran_id)
+ALTER TABLE erp_gl_journal_header ADD CONSTRAINT erp_gl_journal_header_pk PRIMARY KEY (batch_id, batch_trans_id)
 USING INDEX  ENABLE
 /
