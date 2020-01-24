@@ -15,9 +15,9 @@ CREATE TABLE erp_gl_transaction
 		,	gl_trans_period			NUMBER(2,0)
 		,	clt_ven_id					VARCHAR2(6)
 		,	clt_ven_type				VARCHAR2(1)
-		,	gl_trans_reference	VARCHAR2(20)
+		,	trans_reference			VARCHAR2(20)
 		,	reference_type			VARCHAR2(1)
-		,	trans_dt						DATE
+		,	transaction_dt			DATE
 		,	invoice_ref					VARCHAR2(20)
 		,	amount							NUMBER(20,4)	NOT NULL
 		,	user_id							VARCHAR2(50)	NOT NULL

@@ -8,7 +8,7 @@ DROP TABLE erp_gl_journal_type
 /
 
 CREATE TABLE erp_gl_journal_type
-  (   journal_type_id   NUMBER        NOT NULL
+  (   journal_type_id   NUMBER(2)     NOT NULL
     , journal_type_desc VARCHAR2(30)
     , user_id           VARCHAR2(50)  NOT NULL
     , dt_updated        DATE          NOT NULL
